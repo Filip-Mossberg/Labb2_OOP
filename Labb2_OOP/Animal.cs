@@ -7,34 +7,32 @@ namespace Labb2_OOP
 {
     internal class Animal
     {
-        public string Type;
+        public string AnimalType;
         public int Legs;
         public bool Fur;
-        public int Age;
         public double Weight;
         public string Sound;
 
-        public Animal(string _Type, int _Legs, bool _Fur, int _Age, double _Weight, string _Sound)
+        public Animal(string _AnimalType, int _Legs, bool _Fur, double _Weight, string _Sound)
         {
-            this.Type = _Type;
+            this.AnimalType = _AnimalType;
             this.Legs = _Legs;
             this.Fur = _Fur;
-            this.Age = _Age;
             this.Weight = _Weight;
             this.Sound = _Sound;
         }
         public Animal()
         {
-            this.Type = "Animal";
+            this.AnimalType = "Animal";
             this.Sound = "a unknown sound";
         }
         public virtual void MakeSound()
         {
-            Console.WriteLine($"{Type} is saying {Sound}!");
+            Console.WriteLine($"{AnimalType} is saying {Sound}!");
         }
-        public void OldOrYoung()
+        public void LargeOrSmall()
         {
-            string Answer = (Weight >= 10) ? $"Thats a large {Type}." : $"Thats a small {Type}.";
+            string Answer = (Weight >= 10) ? $"Thats a large {AnimalType}." : $"Thats a small {AnimalType}.";
             Console.WriteLine(Answer);
         }
         public void Insect()
