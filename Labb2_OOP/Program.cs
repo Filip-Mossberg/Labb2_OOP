@@ -6,7 +6,10 @@ namespace Labb2_OOP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Animal animal = new Animal("Lion", 4, true, 15, 75, "RRRROOOAAAARRRR");
+            animal.MakeSound();
+            animal.OldOrYoung();
+            animal.Insect();
         }
     }
 }
