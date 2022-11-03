@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
 
 namespace Labb2_OOP
 {
@@ -23,7 +20,7 @@ namespace Labb2_OOP
             this.AnimalType = "Bird";
             this.Legs = 2;
             this.Weight = 1.4;
-            this.Sound = "Scuee";
+            this.Sound = "twee";
             this.Fly = true;
         }
         public override void MakeSound()
@@ -32,7 +29,7 @@ namespace Labb2_OOP
         }
         public void FlyCheck()
         {
-            string Answer = (Weight >= 10) ? $"The {AnimalType} can not fly, maybe its a ostrich or a kiwi bird?." : $"The {AnimalType} can fly!";
+            string Answer = (Fly) ? $"The {AnimalType} can fly!" : $"The {AnimalType} can not fly, maybe its a ostrich or a kiwi bird?.";
             Console.WriteLine(Answer);
         }
     }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
 
 namespace Labb2_OOP
 {
@@ -13,6 +10,7 @@ namespace Labb2_OOP
         public double Weight;
         public string Sound;
 
+        // Constructor where you can create new animals (Any Type)
         public Animal(string _AnimalType, int _Legs, bool _Fur, double _Weight, string _Sound)
         {
             this.AnimalType = _AnimalType;
@@ -21,6 +19,7 @@ namespace Labb2_OOP
             this.Weight = _Weight;
             this.Sound = _Sound;
         }
+        // Default Constructor For a Animal
         public Animal()
         {
             this.AnimalType = "Animal";
@@ -28,7 +27,7 @@ namespace Labb2_OOP
         }
         public virtual void MakeSound()
         {
-            Console.WriteLine($"{AnimalType} is saying {Sound}!");
+            Console.WriteLine($"{AnimalType} is making {Sound}!");
         }
         public void LargeOrSmall()
         {
@@ -38,6 +37,11 @@ namespace Labb2_OOP
         public void Insect()
         {
             string Answer = (Legs == 6) ? $"The animal is a insect" : $"The animal is not a insect";
+            Console.WriteLine(Answer);
+        }
+        public void HasFur()
+        {
+            string Answer = (Fur) ? $"The {AnimalType} has fur" : $"The {AnimalType} does not have fur.";
             Console.WriteLine(Answer);
         }
     }
