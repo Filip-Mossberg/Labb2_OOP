@@ -23,6 +23,9 @@ namespace Labb2_OOP
         public Animal()
         {
             this.AnimalType = "Animal";
+            this.Legs = 4;  
+            this.Fur = true;
+            this.Weight = 2;
             this.Sound = "a unknown sound";
         }
         public virtual void MakeSound()
