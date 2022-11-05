@@ -10,23 +10,14 @@ namespace Labb2_OOP
         public double Weight;
         public string Sound;
 
-        // Constructor where you can create new animals (Any Type)
-        public Animal(string _AnimalType, int _Legs, bool _Fur, double _Weight, string _Sound)
+        // Constructor that works both as a default and build contructor
+        public Animal(string _AnimalType = "Animal", int _Legs = 4, bool _Fur = true, double _Weight = 2.5, string _Sound = "a unknown sound")
         {
             this.AnimalType = _AnimalType;
             this.Legs = _Legs;
             this.Fur = _Fur;
             this.Weight = _Weight;
             this.Sound = _Sound;
-        }
-        // Default Constructor For a Animal
-        public Animal()
-        {
-            this.AnimalType = "Animal";
-            this.Legs = 4;  
-            this.Fur = true;
-            this.Weight = 2;
-            this.Sound = "a unknown sound";
         }
         public virtual void MakeSound()
         {

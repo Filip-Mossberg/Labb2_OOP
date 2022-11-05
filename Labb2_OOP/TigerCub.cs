@@ -5,21 +5,17 @@ namespace Labb2_OOP
     internal class TigerCub : Tiger
     {
         double Age;
-        // Constructor where you can create new tigercubs
-        public TigerCub(int _Legs, bool _Fur, double _Weight, string _Sound, bool _Play, double _Age) : base(_Legs, _Fur, _Weight, _Sound, _Play)
+        // Constructor that works both as a default and build contructor
+        public TigerCub(int _Legs = 4, bool _Fur = true, double _Weight = 10, string _Sound = "RROOAARR",
+            bool _Play = true, double _Age = 2)
         {
             this.AnimalType = "TigerCub";
-        }
-        // Default Constructor For TigerCub
-        public TigerCub()
-        {
-            this.AnimalType = "TigerCub";
-            this.Legs = 4;
-            this.Fur = true;
-            this.Weight = 10;
-            this.Sound = "RRRAAAWWWRR";
-            this.Play = true;
-            this.Age = 2;
+            this.Legs = _Legs;
+            this.Fur = _Fur;
+            this.Weight = _Weight;
+            this.Sound = _Sound;
+            this.Play = _Play;
+            this.Age = _Age;
         }
         public override void MakeSound()
         {

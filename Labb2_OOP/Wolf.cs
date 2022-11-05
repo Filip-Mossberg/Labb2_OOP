@@ -5,8 +5,8 @@ namespace Labb2_OOP
     internal class Wolf : Animal
     {
         public int WolfPackSice;
-        // Constructor where you can create new wolfs
-        public Wolf(int _Legs, bool _Fur, double _Weight, string _Sound, int _WolfPackSice)
+        // Constructor that works both as a default and build contructor
+        public Wolf(int _Legs = 4, bool _Fur = true, double _Weight = 27, string _Sound = "OOoooo", int _WolfPackSice = 7)
         {
             this.AnimalType = "Wolf";
             this.Legs = _Legs;
@@ -14,16 +14,6 @@ namespace Labb2_OOP
             this.Weight = _Weight;
             this.Sound = _Sound;
             this.WolfPackSice = _WolfPackSice;
-        }
-        // Default Constructor For Wolf
-        public Wolf()
-        {
-            this.AnimalType = "Wolf";
-            this.Legs = 4;
-            this.Fur = true;
-            this.Weight = 26;
-            this.Sound = "OOOooooo";
-            this.WolfPackSice = 7;
         }
         public override void MakeSound()
         {

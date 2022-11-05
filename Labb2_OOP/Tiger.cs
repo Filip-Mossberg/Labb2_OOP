@@ -5,8 +5,9 @@ namespace Labb2_OOP
     internal class Tiger : Animal
     {
         public bool Play;
-        // Constructor where you can create new tigers
-        public Tiger(int _Legs, bool _Fur, double _Weight, string _Sound, bool _Play)
+        // Constructor that works both as a default and build contructor
+        public Tiger(int _Legs = 4, bool _Fur = true, double _Weight = 62,
+            string _Sound  = "RRRRAAAWWWRRR", bool _Play = true)
         {
             this.AnimalType = "Tiger";
             this.Legs = _Legs;
@@ -14,16 +15,6 @@ namespace Labb2_OOP
             this.Weight = _Weight;
             this.Sound = _Sound;
             this.Play = _Play;
-        }
-        // Default Constructor For Tiger
-        public Tiger()
-        {
-            this.AnimalType = "Tiger";
-            this.Legs = 4;
-            this.Fur = true;
-            this.Weight = 35;
-            this.Sound = "RRRAAAWWWRR";
-            this.Play = true;
         }
         public override void MakeSound()
         {

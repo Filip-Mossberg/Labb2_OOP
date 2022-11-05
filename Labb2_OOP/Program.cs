@@ -11,7 +11,7 @@ namespace Labb2_OOP
 
             Console.WriteLine("\n|----------------------------|\n");
 
-            Bird bird = new Bird(2, 0.4, "Tweee", false);
+            Bird bird = new Bird("Kiwi Bird",2, 0.4, "Tweee", false);
             bird.MakeSound();
             bird.FlyCheck();
             bird.Insect();
@@ -40,6 +40,8 @@ namespace Labb2_OOP
             TigerCub tigercub = new TigerCub(4, true, 12, "Roar", true,2);
             tigercub.MakeSound();
             tigercub.CubAge();
+
+            Console.ReadKey();
 
         }
     }

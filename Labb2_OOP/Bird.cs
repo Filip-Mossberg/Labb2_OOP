@@ -5,23 +5,15 @@ namespace Labb2_OOP
     internal class Bird : Animal
     {
         public bool Fly;
-        // Constructor where you can create new birds
-        public Bird(int _Legs, double _Weight, string _Sound, bool _Fly) 
+        // Constructor that works both as a default and build contructor
+        public Bird(string _AninalType = "Bird", int _Legs = 2, double _Weight = 1.4,
+            string _Sound = "Twee", bool _Fly = true) 
         {
-            this.AnimalType = "Bird";
+            this.AnimalType = _AninalType;
             this.Legs = _Legs;
             this.Weight = _Weight;
             this.Sound = _Sound;
             this.Fly = _Fly;
-        }
-        // Default Constructor For Bird
-        public Bird()
-        {
-            this.AnimalType = "Bird";
-            this.Legs = 2;
-            this.Weight = 1.4;
-            this.Sound = "twee";
-            this.Fly = true;
         }
         public override void MakeSound()
         {

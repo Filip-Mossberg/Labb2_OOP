@@ -4,20 +4,15 @@ namespace Labb2_OOP
 {
     internal class WhiteTiger : Tiger
     {
-        // Constructor where you can create new whitetigers
-        public WhiteTiger(int _Legs, bool _Fur, double _Weight, string _Sound, bool _Play) : base(_Legs, _Fur, _Weight, _Sound, _Play)
+        // Constructor that works both as a default and build contructor
+        public WhiteTiger(int _Legs = 4, bool _Fur = true, double _Weight = 45, string _Sound = "RRRRAAAAWWWRRR", bool _Play = false) 
         {
             this.AnimalType = "WhiteTiger";
-        }
-        // Default Constructor For WhiteTiger
-        public WhiteTiger()
-        {
-            this.AnimalType = "WhiteTiger";
-            this.Legs = 4;
-            this.Fur = true;
-            this.Weight = 35;
-            this.Sound = "RRRAAAWWWRR";
-            this.Play = false;
+            this.Legs = _Legs;
+            this.Fur = _Fur;
+            this.Weight = _Weight;
+            this.Sound = _Sound;
+            this.Play = _Play;
         }
         public override void MakeSound()
         {
